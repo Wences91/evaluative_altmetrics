@@ -53,8 +53,8 @@ df_m$Color[which(df_m$`Details Page URL`==top_paper_2)] <- top_paper_2
 df_m <- df_m[which(df_m$Metric %in% c('Avg_fw', 'Avg_fav', 'Avg_RT') & df_m$Type!='Bot'),]
 
 df_m$Metric <- factor(df_m$Metric,
-                      levels = c('Avg_fw', 'Avg_fav', 'Avg_RT'),
-                      labels = c('Av. followers', 'Avg. favourite', 'Avg. retweet'),
+                      levels = c('Avg_fav', 'Avg_RT', 'Avg_fw'),
+                      labels = c('Avg. favourite', 'Avg. retweet', 'Av. followers'),
                       ordered = TRUE)
 
 ggplot() +
@@ -107,8 +107,8 @@ df_m$Color[which(df_m$`Details Page URL`==top_paper_2)] <- top_paper_2
 df_m <- df_m[which(df_m$Metric %in% c('Avg_bounce', 'Avg_visits', 'Avg_time')),]
 
 df_m$Metric <- factor(df_m$Metric,
-                      levels = c('Avg_bounce', 'Avg_visits', 'Avg_time'),
-                      labels = c('Avg. bounce', 'Avg. visits', 'Avg. time'),
+                      levels = c('Avg_visits', 'Avg_time', 'Avg_bounce'),
+                      labels = c('Avg. visits', 'Avg. time', 'Avg. bounce'),
                       ordered = TRUE)
 
 ggplot() +
@@ -158,8 +158,8 @@ df_m$Color[which(df_m$`Details Page URL`==top_paper_2)] <- top_paper_2
 df_m <- df_m[which(df_m$Metric %in% c('Avg_words', 'Avg_trans', 'Avg_views')),]
 
 df_m$Metric <- factor(df_m$Metric,
-                      levels = c('Avg_words', 'Avg_trans', 'Avg_views'),
-                      labels = c('Avg. words', 'Avg. transl.', 'Avg. views'),
+                      levels = c('Avg_views', 'Avg_words', 'Avg_trans'),
+                      labels = c('Avg. views', 'Avg. words', 'Avg. transl.'),
                       ordered = TRUE)
 
 df_m <- df_m[which(!(df_m$major_topic %in% c('Geography', 'Culture', 'Other'))),]
