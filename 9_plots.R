@@ -67,13 +67,14 @@ ggplot() +
   theme_light() +
   labs(x='Mentions (tweets)', y='Audience', color='') +
   theme(legend.position = 'bottom',
+        panel.spacing.y = unit(0.75, 'cm'),
         axis.title = element_text(size=12, face='bold'),
         axis.text.y=element_text(hjust=0),
         strip.background = element_rect(fill='black'),
         strip.text.x = element_text(size=12, face='bold'),
         strip.text.y = element_text(size=9),
         panel.background = element_rect(fill='grey95')) +
-  ggh4x::facet_grid2(Type~Metric, scales = 'free', independent = 'all', switch='y')
+  ggh4x::facet_grid2(Type~Metric, scales = 'free', independent = 'all', switch='y', strip = strip_themed(background_y = elem_list_rect(fill = 'grey30', 'grey30')))
 
 
 ## 2.2. News
@@ -120,13 +121,14 @@ ggplot() +
   theme_light() +
   labs(x='Mentions', y='Audience', color='') +
   theme(legend.position = 'bottom',
+        panel.spacing.y = unit(0.75, 'cm'),
         axis.title = element_text(size=12, face='bold'),
         axis.text.y=element_text(hjust=0),
         strip.background = element_rect(fill='black'),
         strip.text.x = element_text(size=11, face='bold'),
         strip.text.y = element_text(size=10),
         panel.background = element_rect(fill='grey95')) +
-  ggh4x::facet_grid2(main_category~Metric, scales = 'free', independent = 'all', switch='y')
+  ggh4x::facet_grid2(main_category~Metric, scales = 'free', independent = 'all', switch='y', strip = strip_themed(background_y = elem_list_rect(fill = 'grey30', 'grey30')))
 
 
 ## 2.3. Wikipedia
@@ -172,13 +174,14 @@ ggplot() +
   theme_light() +
   labs(x='Mentions', y='Audience', color='') +
   theme(legend.position = 'bottom',
+        panel.spacing.y = unit(0.75, 'cm'),
         axis.title = element_text(size=12, face='bold'),
         axis.text.y=element_text(hjust=0),
         strip.background = element_rect(fill='black'),
         strip.text.x = element_text(size=12, face='bold'),
         strip.text.y = element_text(size=10),
         panel.background = element_rect(fill='grey95')) +
-  ggh4x::facet_grid2(major_topic~Metric, scales = 'free', independent = 'all', switch = 'y')
+  ggh4x::facet_grid2(major_topic~Metric, scales = 'free', independent = 'all', switch = 'y', strip = strip_themed(background_y = elem_list_rect(fill = 'grey30', 'grey30')))
 
 
 # 3. Profiles
