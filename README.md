@@ -1,4 +1,4 @@
-#
+# [![DOI](https://zenodo.org/badge/598476867.svg)](https://zenodo.org/badge/latestdoi/598476867)
 
 # Overview
 This repository includes all data processing for the work "*Evaluative altmetrics:  Is there evidence for applying research evaluation?*".
